@@ -21,9 +21,7 @@ fn main() {
     let characters: Vec<char> = my_string.chars().collect();
     let my_collection: Vec<u32> =characters.iter().map(|&x| x as u32).collect();
     let condition = FilterCondition { value: 'o' as u32 };
-    let filtered_vector = custom_filter(&my_collection, &condition); // Prefix with underscore
-// Define a function called custom_filter that takes a collection (e.g., a vector) and a reference to a FilterCondition object as arguments. The function should iterate over the elements in the collection and return a new collection containing only the elements that match the filter condition.
-
+    let filtered_vector = custom_filter(&my_collection, &condition); 
     println!("Original Collection: {:?}", my_collection);
     println!("Filtered Collection: {:?}", filtered_vector);
     println!("Number of Filtered Collection: {:?}", filtered_vector.len());
